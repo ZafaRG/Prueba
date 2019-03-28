@@ -44,12 +44,12 @@ public class validacion extends HttpServlet {
 		Matcher mat2 = pat2.matcher(pass);
 	
 		if (mat.find()|| mat1.find()||mat2.find()) {
-		
+			getServletContext().getRequestDispatcher("ok.html").forward(request, response);
 				
 			}
 			
 		else {
-			getServletContext().getRequestDispatcher("ok.html").forward(request, response);
+			
 		}
 		
 		
