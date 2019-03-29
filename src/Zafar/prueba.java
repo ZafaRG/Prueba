@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.servlet.GenericServlet;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,7 +34,8 @@ public class prueba extends HttpServlet {
 		if (mat.matches()) {
 			getServletContext().getRequestDispatcher("/html/ok.html").forward(request, response);
 		}else {
-			System.out.println("Error");
+			GenericServlet logger = null;
+			logger.log("Error");
 		}
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
