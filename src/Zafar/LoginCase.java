@@ -11,8 +11,6 @@ public class LoginCase {
 
 	/*CREATE TABLE*/
 	public static boolean insertUser(String uName, String uPass, String uEmail) {
-		Connection con;
-		
 		Connection conectionNick;
 		
 		PreparedStatement pss = null;

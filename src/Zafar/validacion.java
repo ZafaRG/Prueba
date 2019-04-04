@@ -44,9 +44,12 @@ public class validacion extends HttpServlet {
 		Matcher mat2 = pat2.matcher(pass);
 	
 		if (mat.find()|| mat1.find()||mat2.find()) {
-			getServletContext().getRequestDispatcher("ok.html").forward(request, response);
+			
+			getServletContext().getRequestDispatcher("/html/ok.html").forward(request, response);
 				
-		}			
+		}else {
+			getServletContext().getRequestDispatcher("/html/error.html").forward(request, response);
+		}
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
