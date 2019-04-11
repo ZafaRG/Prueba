@@ -23,7 +23,7 @@ public class BBDD {
 
     String jdbcUrl = "jdbc:postgresql://localhost:5432/JavaTomcat";
     String username = "postgres";
-    String password = "123";
+    String pa = "123";
 
     Connection conn = null;
     Statement stmt = null;
@@ -34,7 +34,7 @@ public class BBDD {
        // Class.forName("org.postgresql.Driver"); // Class.forName() is not needed since JDBC 4.0
 
         // Step 2 - Open connection
-        conn = DriverManager.getConnection(jdbcUrl, username, password);
+        conn = DriverManager.getConnection(jdbcUrl, username, pa);
 
         // Step 3 - Execute statement
         stmt = conn.createStatement();
